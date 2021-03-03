@@ -11,6 +11,7 @@ const cors = require('cors');
 //importing routes 
 const authRoutes = require("./routes/auth");
 const categoryRoutes = require("./routes/category");
+const productRoutes = require("./routes/product");
 
 
 //database connection
@@ -30,6 +31,7 @@ app.use(cors());
 //routes
 app.use("/api", authRoutes);
 app.use("/api", categoryRoutes);
+app.use("/api", productRoutes);
 
 const port = process.env.PORT || 8000;
 
