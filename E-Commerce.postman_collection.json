@@ -1,0 +1,634 @@
+{
+	"info": {
+		"_postman_id": "a837ab17-35e4-4942-87ab-a1c460f503eb",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Steve Rogers\",\n    \"email\": \"rogers@gmail.com\",\n    \"password\": \"Abc@123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"rogers@gmail.com\",\n    \"password\" : \"Abc@123\"\n    \n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/signout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "createCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Winter Collection\"\n} "
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/create/category/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"create",
+								"category",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/category/603de912bad17541b5509e34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category",
+								"603de912bad17541b5509e34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Festival apparel\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/category/603de85d62d8e940f2f9b82c/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category",
+								"603de85d62d8e940f2f9b82c",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/category/603de964bad17541b5509e35/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"category",
+								"603de964bad17541b5509e35",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Learn code online",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "A Tshirt for Coders",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "25",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "55",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "603de912bad17541b5509e34",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/home/sumukhesh/Sumu/Projects/mernbootcamp/projbackend/compressed images/three.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/product/create/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"create",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Black T",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "603de912bad17541b5509e34",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/product/603f2662c55644379f19ede0/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"603f2662c55644379f19ede0",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Black T",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "603de912bad17541b5509e34",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/product/603f2662c55644379f19ede0/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"603f2662c55644379f19ede0",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/product/603f2b88c55644379f19ede2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"603f2b88c55644379f19ede2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductPhotoById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/product/photo/603f2b88c55644379f19ede2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"product",
+								"photo",
+								"603f2b88c55644379f19ede2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUniqueCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "createOrder",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\": {\n        \"products\": [\n            {\n                \"product\": \"603f2b35c55644379f19ede1\",\n                \"name\": \"A Nice T-shirt\",\n                \"count\": 2,\n                \"price\": 20\n            },\n            {\n                \"product\": \"603f2b88c55644379f19ede2\",\n                \"name\": \"Learn code online\",\n                \"count\": 1,\n                \"price\": 25\n            }\n        ],\n        \"cash_on_delivery\": 0,\n        \"amount\": 25,\n        \"address\": \"Lane 4, Jacob st\",\n        \"status\": \"Delivered\",\n        \"user\": \"603dd7a650dbb026bc7e8419\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/order/create/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order",
+								"create",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllOrders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order\": {\n        \"products\": [\n            {\n                \"product\": \"603f2b35c55644379f19ede1\",\n                \"name\": \"A Nice T-shirt\",\n                \"count\": 2,\n                \"price\": 20\n            },\n            {\n                \"product\": \"603f2b88c55644379f19ede2\",\n                \"name\": \"Learn code online\",\n                \"count\": 1,\n                \"price\": 25\n            }\n        ],\n        \"cash_on_delivery\": 0,\n        \"amount\": 25,\n        \"address\": \"Lane 4, Jacob st\",\n        \"status\": \"Delivered\",\n        \"user\": \"603dd7a650dbb026bc7e8419\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/order/all/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order",
+								"all",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAvailableOrderStatuses",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/order/status/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order",
+								"status",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrderStatus",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDNkZDdhNjUwZGJiMDI2YmM3ZTg0MTkiLCJpYXQiOjE2MTQ2NjYyMzR9.Y1xVWhnEbWlB2C5psU2chvch9QfcRlMoJ97EFsp2SnI",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"Cancelled\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/order/603f4e7386db0353daccfeb3/status/603dd7a650dbb026bc7e8419",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"order",
+								"603f4e7386db0353daccfeb3",
+								"status",
+								"603dd7a650dbb026bc7e8419"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
