@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "603f4e7386db0353daccfeb3"
+  },
+  "status": "Cancelled",
+  "products": [
+    {
+      "_id": {
+        "$oid": "603f4e7386db0353daccfeb4"
+      },
+      "product": {
+        "$oid": "603f2b35c55644379f19ede1"
+      },
+      "name": "A Nice T-shirt",
+      "count": 2,
+      "price": 20
+    },
+    {
+      "_id": {
+        "$oid": "603f4e7386db0353daccfeb5"
+      },
+      "product": {
+        "$oid": "603f2b88c55644379f19ede2"
+      },
+      "name": "Learn code online",
+      "count": 1,
+      "price": 25
+    }
+  ],
+  "cash_on_delivery": false,
+  "amount": 25,
+  "address": "Lane 4, Jacob st",
+  "user": {
+    "$oid": "603dd7a650dbb026bc7e8419"
+  },
+  "createdAt": {
+    "$date": "2021-03-03T08:53:07.821Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-03T09:48:52.558Z"
+  },
+  "__v": 0
+}]

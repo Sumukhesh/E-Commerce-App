@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "603dd7a650dbb026bc7e8419"
+  },
+  "role": 1,
+  "purchases": [
+    {
+      "_id": null,
+      "name": "A Nice T-shirt",
+      "description": null,
+      "category": null,
+      "quantity": null,
+      "amount": 25,
+      "transaction_id": null
+    },
+    {
+      "_id": null,
+      "name": "Learn code online",
+      "description": null,
+      "category": null,
+      "quantity": null,
+      "amount": 25,
+      "transaction_id": null
+    }
+  ],
+  "name": "Steve Rogers",
+  "email": "rogers@gmail.com",
+  "salt": "ac550de4-de23-43ba-96a7-67151bcbb0c1",
+  "encry_password": "41d973df3a629ca874fb22b3d98de66c0e8522eff7c4053bc06ca805c4f4f7b8",
+  "createdAt": {
+    "$date": "2021-03-02T06:13:58.750Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-03T08:53:07.608Z"
+  },
+  "__v": 0
+}]

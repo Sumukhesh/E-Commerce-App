@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "603de8f0fc0fb04177b4385e"
+  },
+  "name": "End of Season",
+  "createdAt": {
+    "$date": "2021-03-02T07:27:44.105Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-02T07:27:44.105Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "603de912bad17541b5509e34"
+  },
+  "name": "Summer Collection",
+  "createdAt": {
+    "$date": "2021-03-02T07:28:18.886Z"
+  },
+  "updatedAt": {
+    "$date": "2021-03-02T07:28:18.886Z"
+  },
+  "__v": 0
+}]
